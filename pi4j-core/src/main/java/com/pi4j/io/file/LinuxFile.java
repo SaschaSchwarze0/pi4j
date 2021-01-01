@@ -11,7 +11,7 @@ package com.pi4j.io.file;
  * this project can be found here:  https://www.pi4j.com/
  * **********************************************************************
  * %%
- * Copyright (C) 2012 - 2019 Pi4J
+ * Copyright (C) 2012 - 2021 Pi4J
  * %%
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
@@ -31,8 +31,8 @@ package com.pi4j.io.file;
 
 import com.pi4j.util.NativeLibraryLoader;
 
-import sun.misc.Cleaner;
-import sun.misc.SharedSecrets;
+import jdk.internal.misc.SharedSecrets;
+import jdk.internal.ref.Cleaner;
 
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
