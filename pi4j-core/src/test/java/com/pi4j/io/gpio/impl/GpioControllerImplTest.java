@@ -30,7 +30,6 @@ package com.pi4j.io.gpio.impl;
  */
 
 import com.pi4j.io.gpio.*;
-import com.pi4j.io.gpio.exception.PinProviderException;
 import org.junit.Before;
 import org.junit.Test;
 

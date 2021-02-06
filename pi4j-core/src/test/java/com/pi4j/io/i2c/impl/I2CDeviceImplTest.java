@@ -46,10 +46,6 @@ import org.mockito.Mock;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
-
-import com.pi4j.io.i2c.impl.I2CBusImpl;
-import com.pi4j.io.i2c.impl.I2CDeviceImpl;
-
 @RunWith(MockitoJUnitRunner.class)
 public class I2CDeviceImplTest {
 

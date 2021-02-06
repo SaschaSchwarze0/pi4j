@@ -31,8 +31,8 @@ package com.pi4j.io.file;
 
 import com.pi4j.util.NativeLibraryLoader;
 
-import sun.misc.Cleaner;
-import sun.misc.SharedSecrets;
+import jdk.internal.misc.SharedSecrets;
+import jdk.internal.ref.Cleaner;
 
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
@@ -322,7 +322,7 @@ public class LinuxFile extends RandomAccessFile {
         MappedByteBuffer dbb;
         try {
             dbb = (MappedByteBuffer)directByteBufferConstructor.newInstance(
-                    new Object[] { new Integer(size), new Long(addr), this.getFD(), unmapper });
+                    new Object[] { Integer.valueOf(size), Long.valueOf(addr), this.getFD(), unmapper });
         } catch (InstantiationException e) {
             throw new InternalError(e.getMessage());
         } catch (IllegalAccessException e) {

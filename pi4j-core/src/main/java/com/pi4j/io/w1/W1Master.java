@@ -207,7 +207,6 @@ public class W1Master {
      */
     @SuppressWarnings("unchecked")
     public <T extends W1Device> T getDeviceById(final String id) {
-        final List<W1Device> filteredDevices = new ArrayList<>();
         for (final W1Device device : devices) {
             if (device.getId().equalsIgnoreCase(id)) {
                 return (T)device;

@@ -1,5 +1,8 @@
 package com.pi4j.wiringpi;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * #%L
  * **********************************************************************
@@ -31,9 +34,6 @@ package com.pi4j.wiringpi;
 
 
 import com.pi4j.util.NativeLibraryLoader;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * <[>WiringPi GPIO Control</[>
@@ -685,7 +685,7 @@ public class Gpio {
     }
 
     // internal collection for use subscribed IRS callbacks
-    private static List<GpioInterruptCallback> isrCallbacks[] = new List[NUM_PINS];
+    private static List<GpioInterruptCallback>[] isrCallbacks = new List[NUM_PINS];
 
     // delegated native method for 'wiringPiISR'
     private static native int _wiringPiISR(int pin, int edgeType);

@@ -32,7 +32,6 @@ package com.pi4j.device.access;
 
 import com.pi4j.device.DeviceListener;
 import com.pi4j.device.ObserveableDeviceBase;
-import com.pi4j.device.access.OpenerState;
 
 public abstract class OpenerBase extends ObserveableDeviceBase implements Opener
 {
